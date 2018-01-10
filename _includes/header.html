@@ -1,0 +1,23 @@
+<header class="no-fouc">
+	<a href="/" class="logo">{% include icons/uplift-icon.html %}</a>
+	<nav class="site-nav">
+		<div class="hamburger-menu">
+	        <div class="bar"></div>	
+	    </div>
+		<div class="mobile-nav hide">
+			<ul>
+				<li><a href="/" class="caps small bold fx-underline hide-on-desktop {% if page.url == "/" %} active {% endif %}">Home</a></li>
+				{% assign current = page.url %}
+				{% assign sorted_pages = site.pages | sort: "order" %}
+				{% for page in sorted_pages %}
+					{% if page.isInMenu == 1 %}	
+						<li><a href="{{page.url}}" class="caps small bold fx-underline {% if page.url == current %} active {% endif %}">{{page.title}}</a></li>
+					{% endif %}
+				{% endfor %} 
+				<a class="cta white fx-underline" href="/give">Give</a>
+			</ul>
+		</div>
+	</nav>
+</header>
+<div class="clearfix"></div> 
+

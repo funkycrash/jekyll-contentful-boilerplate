@@ -1,0 +1,41 @@
+# Site settings
+title: Uplift
+email: contact@joinuplift.org
+description: >
+  Uplift is a rapidly growing initiative committed to empowering the next one million women 
+  and families in 20 countries with basic skills, training and assets to overcome extreme poverty.
+baseurl: ""
+url: "https://www.joinuplift.org" # the base hostname & protocol for your site
+image_path: '/assets/img'
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+exclude: ['_sass', '_src', '_grunt', 'node_modules', 'Gruntfile.js', 'package.json', 'README.md', 'Gemfile', 'build.sh']
+
+# Enabling gems
+plugins_dir: [
+  "jekyll-contentful"
+]
+
+learnMoreText: 'Learn More'
+
+contentful:
+  preview: No 
+  production_access_token: 3daa0dd4f9e15527087929f31a0258c24acfbb4abdfaa737fc54e7302fa4bc61
+  preview_access_token: 4e2393762269e366fc3b0d6211628b6cb3d4610dbc7fad90066e70684df2cbb5
+  space: t9i3w0za20rx
+  content_types:
+   - "news"
+  spaces:
+    - proddata: # Jekyll _data folder identifier - Required
+        space: t9i3w0za20rx        # Required
+        access_token: 3daa0dd4f9e15527087929f31a0258c24acfbb4abdfaa737fc54e7302fa4bc61 # Required
+        cda_query:                 # Optional
+          include: 2
+          limit: 300
+        content_types:             # Optional
+         cat: news
+         cat: websiteContent
+         cat: testimonials
+ 

@@ -1,0 +1,55 @@
+{% assign data = site.data.contentful.spaces.proddata.uniqueFooter[0] %}
+
+<footer>
+	<section class="bg-yellow form-texture">
+		<div class="sign-up-box grid text-center">
+			<h2 class="color-blue bold">Join Us</h2>
+		</div>
+		<div class="grid text-center">
+			<div class="sign-up-form">
+				{% include mailchimp-signup.html %}
+			</div>
+		</div>
+	</section>
+	<section class="bg-blue-dark hide-on-mobile">
+ 		<div class="grid">
+ 			<div class="col-1-4 tablet-col-1-4">
+ 				<p class="small caps color-yellow">Contact</p>
+ 				<p class="small">836 Montgomery st</p>
+ 				<p class="small">San Francisco</p>
+ 				<p class="small">California</p>
+ 				<p class="small">United States</p>
+ 				<p class="small">info@joinuplift.org</p> 
+ 			</div>
+ 			<div class="col-1-4 tablet-col-1-4">
+ 				<p class="small caps color-yellow">Resources</p>
+ 				<a href="https://twitter.com/joinuplift"><p class="color-white small">Twitter</p></a>
+ 				<a href="https://www.facebook.com/joinuplift/"><p class="color-white small">Facebook</p></a>
+ 				<!-- <a href="#"><p class="color-white small">Donors</p></a>
+ 				<a href="#"><p class="color-white small">Contact</p></a> -->
+ 			</div>
+ 			<div class="col-1-4 tablet-col-1-4">
+ 				<p class="small caps color-yellow small">Legal</p>
+ 				<p class="color-white small">Uplift is an initiative of Confiance, a nonprofit U.S. 501c3. All donations to Uplift are 100 percent tax deductible.</p>
+ 			</div>
+ 			<div class="col-1-4 tablet-col-1-4">
+ 				<p class="small caps color-yellow">Support Uplift</p>
+ 				<!-- <div class="social-icons">
+ 					<a href="https://twitter.com/joinuplift">{% include twitter-icon.html %}</a>
+ 					<a href="https://www.facebook.com/joinuplift/">{% include fb-icon.html %}</a>
+ 				</div> -->
+ 				<a class="cta white" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S8J56MWT9BRRU" target="_blank">Donate</a>
+ 			</div>
+ 		</div>
+ 	</section>
+</footer>
+<script src="/assets/js/app.min.js"></script>
+<script>
+    var bLazy = new Blazy({ 
+    offset: 200
+});
+</script>
+
+{% if page.title == "Give" %}
+	{% include donate-script.html %}
+{% endif %}
